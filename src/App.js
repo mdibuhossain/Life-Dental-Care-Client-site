@@ -7,6 +7,7 @@ import Contact from './Page/Contact';
 import Home from './Page/Home';
 import Login from './Page/Login';
 import Register from './Page/Register';
+import ServiceDetail from './Page/ServiceDetail';
 import Shop from './Page/Shop';
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/service/:serviceID">
+              <ServiceDetail />
             </Route>
             <Route exact path="/shop">
               <Shop />
