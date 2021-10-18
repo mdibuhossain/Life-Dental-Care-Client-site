@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../Hook/useAuth';
 
 const Login = () => {
-    const { isLoading, signWithGoogle, signInWithEmail, setEmail, setPassword } = useAuth();
+    const { error, signWithGoogle, signInWithEmail, setEmail, setPassword } = useAuth();
     return (
         <>
             <div className="login-page flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -20,6 +20,9 @@ const Login = () => {
                     <form className="mt-8 space-y-6" action="#" method="POST">
                         <input type="hidden" name="remember" defaultValue="true" />
                         <div className="rounded-md shadow-sm -space-y-px">
+                            {
+                                error && <p className="text-red-500 bg-gray-100 border px-3 rounded my-3">{error}</p>
+                            }
                             <div>
                                 <label htmlFor="email-address" className="sr-only">
                                     Email address

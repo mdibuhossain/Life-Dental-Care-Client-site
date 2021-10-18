@@ -20,7 +20,7 @@ export const useFirebase = () => {
         const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
             .then(result => setUser(result.user))
-            .catch(error => setError(error.message))
+            .catch(error => setError('Something wrong with google'))
             .finally(() => setIsLoading(false))
     }
 
@@ -30,7 +30,7 @@ export const useFirebase = () => {
         setError('');
         signInWithEmailAndPassword(auth, email, password)
             .then(result => setUser(result.user))
-            .catch(error => setError("Invalid Email and Password!"))
+            .catch(error => setError("Incorrect Email and Password!"))
             .finally(() => setIsLoading(false))
     }
 
@@ -46,7 +46,7 @@ export const useFirebase = () => {
                     photoURL: `${name && "/assets/img/avator.png"}`
                 }).then(() => { }).catch(error => setError(error.message))
             })
-            .catch(error => setError(error.message))
+            .catch(error => setError('Invalid Email and Password!'))
             .finally(() => setIsLoading(false))
     }
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../Hook/useAuth';
 
 const Register = () => {
-    const { user, signUpWithEmail, setName, setEmail, setPassword, isLoading } = useAuth();
+    const { user, signUpWithEmail, setName, setEmail, setPassword, error } = useAuth();
     console.log(user);
 
     return (
@@ -22,6 +22,11 @@ const Register = () => {
                     <form className="mt-8 space-y-6" action="#" method="POST">
                         <input type="hidden" name="remember" defaultValue="true" />
                         <div className="rounded-md shadow-sm -space-y-px">
+                            <div>
+                                {
+                                    error && <p className="text-red-500 bg-gray-100 border px-3 rounded my-3">{error}</p>
+                                }
+                            </div>
                             <div>
                                 <label htmlFor="name" className="sr-only">
                                     Your name
