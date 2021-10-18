@@ -3,7 +3,6 @@ import { BiLike } from 'react-icons/bi'
 import Tilt from 'react-tilt'
 
 const ServiceItem = ({ service }) => {
-    console.log(service);
     return (
         <Tilt className="tilt-container cursor-pointer">
             <div className="border rounded-t-xl overflow-hidden">

@@ -12,7 +12,7 @@ function classNames(...classes) {
 
 const Header = () => {
     const { user, logOut, isLoading } = useAuth();
-    console.log(user);
+    console.log(user && user.photoURL);
     return (
         <>
             <Disclosure as="nav" className="bg-gray-800 fixed top-0 z-10 w-screen">
@@ -67,8 +67,8 @@ const Header = () => {
                                     </div>
                                 </div>
                                 {
-                                    (isLoading) ? <div class=" flex justify-center items-center">
-                                        <div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-purple-300"></div>
+                                    (isLoading) ? <div className=" flex justify-center items-center">
+                                        <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-purple-300"></div>
                                     </div> :
                                         (user?.displayName || user?.email) ? <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                                             <button
@@ -86,8 +86,8 @@ const Header = () => {
                                                         <span className="sr-only">Open user menu</span>
                                                         <img
                                                             className="h-8 w-8 rounded-full"
-                                                            src={user.photoURL}
-                                                            alt=""
+                                                            src={user.photoURL || '/assets/img/avator.png'}
+                                                            alt="profile_pic"
                                                         />
                                                     </Menu.Button>
                                                 </div>

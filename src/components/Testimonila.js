@@ -22,8 +22,6 @@ const Testimonila = () => {
                 loop={true}
                 spaceBetween={0}
                 slidesPerView={1}
-                onSlideChange={() => console.log('slide chage')}
-                onSwiper={swiper => console.log(swiper)}
                 pagination={{ clickable: true }}
             >
                 {

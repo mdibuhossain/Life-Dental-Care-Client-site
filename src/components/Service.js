@@ -6,7 +6,6 @@ import ServiceItem from './ServiceItem';
 
 const Service = () => {
     const { serviceList } = useAPI();
-    console.log(serviceList);
     return (
         <div className="md:w-10/12  w-9/12 mx-auto mb-20">
             <SectionTitle

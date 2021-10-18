@@ -28,11 +28,11 @@ export const useFirebase = () => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-                setUser(user)
+                setUser(result.user)
                 updateProfile(auth.currentUser, {
                     displayName: `${name && name}`,
                     photoURL: `${name && "/assets/img/avator.png"}`
-                }).then(() => { setUser(user) }).catch(error => setError(error.message))
+                }).then(() => { }).catch(error => setError(error.message))
             })
             .catch(error => setError(error.message))
             .finally(() => setIsLoading(false))
@@ -42,7 +42,7 @@ export const useFirebase = () => {
         setIsLoading(true);
         signOut(auth)
             .then(() => setUser({}))
-            // .finally(() => setIsLoading(false))
+        // .finally(() => setIsLoading(false))
     }
 
     useEffect(() => {
