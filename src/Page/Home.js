@@ -3,14 +3,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore from 'swiper';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import BannerBG from '../components/BannerStyled';
+import Banner from '../components/Banner';
+import Service from '../components/Service';
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
-import Banner from '../components/Banner';
 
 const Home = () => {
     return (
-        <header>
+        <div>
             <Swiper slidesPerView={1} spaceBetween={0} loop={true} pagination={{
                 "clickable": true
             }} navigation={false} className="mySwiper">
@@ -35,7 +36,8 @@ const Home = () => {
                     </BannerBG>
                 </SwiperSlide>
             </Swiper>
-        </header>
+            <Service />
+        </div>
     );
 };
 

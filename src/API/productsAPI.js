@@ -1,4 +1,4 @@
-export const products = [
+export const productsAPI = [
     {
         id: 'abc1',
         name: 'Amoxicillin',

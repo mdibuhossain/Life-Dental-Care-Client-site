@@ -12,10 +12,9 @@ function classNames(...classes) {
 
 const Header = () => {
     const { user, logOut } = useAuth();
-    console.log(user);
     return (
         <>
-            <Disclosure as="nav" className="bg-gray-800 fixed top-0 w-screen">
+            <Disclosure as="nav" className="bg-gray-800 fixed top-0 z-10 w-screen">
                 {({ open }) => (
                     <>
                         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">

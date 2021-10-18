@@ -1,4 +1,4 @@
-export const services = [
+export const servicesAPI = [
     {
         id: '0x1',
         title: 'Complete Whitening Pack',

@@ -14,10 +14,19 @@ body{
   min-height: calc(100vh - 64px);
 }
 
+/* service container */
+.service-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+
 /* login page */
 .login-page{
   height: calc(100vh - 64px);
 }
+
+
 
 
 

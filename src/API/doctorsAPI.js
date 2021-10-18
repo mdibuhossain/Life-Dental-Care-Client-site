@@ -1,4 +1,4 @@
-export const doctors = [
+export const doctorsAPI = [
     {
         id: 'ooxx1',
         name: 'Archie White',

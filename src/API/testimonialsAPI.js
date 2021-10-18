@@ -1,4 +1,4 @@
-export const testimonials = [
+export const testimonialsAPI = [
     {
         id: '00x1',
         title: 'Friendly staff, very helpful.',
