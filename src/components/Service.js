@@ -7,7 +7,7 @@ import ServiceItem from './ServiceItem';
 const Service = () => {
     const { serviceList } = useAPI();
     return (
-        <div className="md:w-10/12  w-9/12 mx-auto mb-20">
+        <div className="md:w-10/12  w-9/12 mx-auto">
             <SectionTitle
                 title="Our services"
                 subtitle="What we do?"
@@ -17,6 +17,7 @@ const Service = () => {
                     serviceList.map(item => <ServiceItem key={item.id} service={item} />)
                 }
             </div>
+            <SectionTitle />
         </div>
     );
 };

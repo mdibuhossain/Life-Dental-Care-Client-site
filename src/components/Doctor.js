@@ -6,7 +6,7 @@ import SectionTitle from './SectionTitle';
 const Doctor = () => {
     const { doctorList } = useAPI();
     return (
-        <div className="md:w-10/12 w-9/12 mx-auto mb-20">
+        <div className="md:w-10/12 w-9/12 mx-auto">
             <SectionTitle
                 title="Meet Our Doctors"
                 subtitle="Team of Professionals"
@@ -16,6 +16,7 @@ const Doctor = () => {
                     doctorList.map(doc => <DoctorItem key={doc.id} doc={doc} />)
                 }
             </div>
+            <SectionTitle />
         </div>
     );
 };

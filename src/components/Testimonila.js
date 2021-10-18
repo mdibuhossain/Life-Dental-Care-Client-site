@@ -12,7 +12,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFlip]);
 const Testimonila = () => {
     const { testimonialList } = useAPI();
     return (
-        <div className="md:w-10/12 w-9/12 mx-auto mb-20">
+        <div className="md:w-10/12 w-9/12 mx-auto">
             <SectionTitle
                 title="Testimonials"
                 subtitle="What Our Patients Say About Us"
@@ -44,6 +44,7 @@ const Testimonila = () => {
                     })
                 }
             </Swiper>
+            <SectionTitle />
         </div>
     );
 };
