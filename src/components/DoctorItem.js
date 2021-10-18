@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 const DoctorItem = ({ doc }) => {
     return (
@@ -9,6 +10,11 @@ const DoctorItem = ({ doc }) => {
             <div className="text-center my-5">
                 <h2 className="text-2xl">{doc.name}</h2>
                 <p className="text-blue-500">{doc.specialist}</p>
+            </div>
+            <div className="flex justify-center items-center text-gray-500 text-xl">
+                <FaTwitter />
+                <FaLinkedinIn className="mx-3" />
+                <FaInstagram />
             </div>
         </div>
     );

@@ -10,7 +10,7 @@ const Shop = () => {
             <SectionTitle title="Shop" />
             <hr />
             <SectionTitle />
-            <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-5">
+            <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-8">
                 {
                     productList.map(product => <Product key={product.id} product={product} />)
                 }

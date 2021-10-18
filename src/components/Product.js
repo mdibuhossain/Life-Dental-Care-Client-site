@@ -3,7 +3,7 @@ import { FaCartPlus } from 'react-icons/fa'
 
 const Product = ({ product }) => {
     return (
-        <div className="border rounded-xl overflow-hidden">
+        <div className="border rounded-xl overflow-hidden transform  duration-200 hover:shadow-lg sm:hover:scale-105">
             <img className="w-full" src={product.img} alt="product" />
             <div className="flex flex-col justify-around">
                 <div className="p-3">
