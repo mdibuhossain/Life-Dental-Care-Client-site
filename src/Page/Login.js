@@ -1,13 +1,14 @@
 import React from 'react';
 import { HiLockClosed } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../Hook/useAuth';
 
 const Login = () => {
-    const { user, isLoading, signWithGoogle } = useAuth();
+    const { isLoading, signWithGoogle } = useAuth();
     console.log(isLoading);
     return (
         <>
-            <div className="flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+            <div className="login-page flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-md w-full space-y-8">
                     <div>
                         <img
@@ -64,9 +65,9 @@ const Login = () => {
                             </div>
 
                             <div className="text-sm">
-                                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                                <Link to="/" className="font-medium text-indigo-600 hover:text-indigo-500">
                                     Don't have an account?
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
