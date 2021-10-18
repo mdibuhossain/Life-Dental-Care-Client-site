@@ -6,7 +6,7 @@ const ServiceItem = ({ service }) => {
     console.log(service);
     return (
         <Tilt className="tilt-container cursor-pointer">
-            <div className="Tilt-inner border rounded-t-xl overflow-hidden">
+            <div className="border rounded-t-xl overflow-hidden">
                 <div className="h-auto w-auto overflow-hidden">
                     <img className="service-item-img" src={service?.img} alt="" />
                 </div>
