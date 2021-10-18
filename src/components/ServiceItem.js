@@ -5,10 +5,10 @@ import Tilt from 'react-vanilla-tilt'
 const ServiceItem = ({ service }) => {
     console.log(service);
     return (
-        <Tilt className="overflow-hidden">
+        <Tilt>
             <div>
-                <div className="h-auto overflow-hidden">
-                    <img className="rounded-xl" src={service?.img} alt="" />
+                <div className="h-auto w-auto overflow-hidden rounded-xl">
+                    <img src={service?.img} alt="" />
                 </div>
                 <div className="p-4">
                     <div>
