@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from 'firebase/auth';
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signOut } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { initAuth } from '../Firebase/initAuth';
 
@@ -6,6 +6,9 @@ initAuth();
 
 export const useFirebase = () => {
     const [user, setUser] = useState({});
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const auth = getAuth();
@@ -18,6 +21,22 @@ export const useFirebase = () => {
             .then(result => setUser(result.user))
             .catch(error => setError(error.message))
             .finally(() => setIsLoading(false))
+    }
+
+    const signWithEmail = (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                setUser(user)
+                if (user) {
+                    updateProfile(auth.currentUser, {
+                        displayName: `${name && name}`,
+                        photoURL: `${name && "/assets/img/avator.png"}`
+                    }).then(() => { }).catch(error => setError(error.message))
+                }
+            })
+            .catch(error => setError(error.message))
     }
 
     const logOut = () => {
@@ -43,7 +62,14 @@ export const useFirebase = () => {
         user,
         error,
         isLoading,
+        name,
+        email,
+        password,
+        setPassword,
+        setEmail,
+        setName,
         logOut,
-        signWithGoogle
+        signWithGoogle,
+        signWithEmail
     }
 }

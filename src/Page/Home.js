@@ -22,7 +22,7 @@ const Home = () => {
                         <Banner
                             greeting="Welcome to Life Dental Care"
                             title="Caring for all your"
-                            title2nd="family's detals needs"
+                            title2nd="family's dentals needs"
                             img="/assets/img/banner/banner-item-1.png"
                         />
                     </BannerBG>

@@ -6,4 +6,4 @@ const navigation = [
 ]
 
 
-export {navigation};
+export { navigation };

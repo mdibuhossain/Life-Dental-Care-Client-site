@@ -6,6 +6,7 @@ import AuthProvider from './Context/AuthProvider';
 import Contact from './Page/Contact';
 import Home from './Page/Home';
 import Login from './Page/Login';
+import Register from './Page/Register';
 import Shop from './Page/Shop';
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route exact path="/login">
               <Login />
+            </Route>
+            <Route exact path="/register">
+              <Register />
             </Route>
           </Switch>
           <Footer />
