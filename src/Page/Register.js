@@ -4,19 +4,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../Hook/useAuth';
 
 const Register = () => {
-    const { user, signWithEmail, name, email, password, setName, setEmail, setPassword, isLoading } = useAuth();
-    // const handleName = (e) => {
-    //     const tmpName = e.target.value;
-    //     setName(tmpName);
-    // }
-    // const handleEmail = (e) => {
-    //     const tmpEmail = e.target.value;
-    //     setEmail(tmpEmail);
-    // }
-    // const handlePassword = (e) => {
-    //     const tmpPassword = e.target.value;
-    //     setPassword(tmpPassword);
-    // }
+    const { user, signUpWithEmail, setName, setEmail, setPassword, isLoading } = useAuth();
     console.log(user);
 
     return (
@@ -103,7 +91,7 @@ const Register = () => {
 
                         <div>
                             <button
-                                onClick={signWithEmail}
+                                onClick={signUpWithEmail}
                                 type="submit"
                                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             >

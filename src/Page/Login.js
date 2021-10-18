@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../Hook/useAuth';
 
 const Login = () => {
-    const { isLoading, signWithGoogle } = useAuth();
-    console.log(isLoading);
+    const { isLoading, signWithGoogle, signInWithEmail, setEmail, setPassword } = useAuth();
     return (
         <>
             <div className="login-page flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -26,6 +25,7 @@ const Login = () => {
                                     Email address
                                 </label>
                                 <input
+                                    onBlur={(e) => { setEmail(e.target.value) }}
                                     id="email-address"
                                     name="email"
                                     type="email"
@@ -40,6 +40,7 @@ const Login = () => {
                                     Password
                                 </label>
                                 <input
+                                    onBlur={(e) => { setPassword(e.target.value) }}
                                     id="password"
                                     name="password"
                                     type="password"
@@ -73,6 +74,7 @@ const Login = () => {
 
                         <div>
                             <button
+                                onClick={signInWithEmail}
                                 type="submit"
                                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             >
