@@ -29,21 +29,20 @@ export const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(user)
-                if (user) {
-                    updateProfile(auth.currentUser, {
-                        displayName: `${name && name}`,
-                        photoURL: `${name && "/assets/img/avator.png"}`
-                    }).then(() => { }).catch(error => setError(error.message))
-                }
+                updateProfile(auth.currentUser, {
+                    displayName: `${name && name}`,
+                    photoURL: `${name && "/assets/img/avator.png"}`
+                }).then(() => { setUser(user) }).catch(error => setError(error.message))
             })
             .catch(error => setError(error.message))
+            .finally(() => setIsLoading(false))
     }
 
     const logOut = () => {
         setIsLoading(true);
         signOut(auth)
             .then(() => setUser({}))
-            .finally(() => setIsLoading(false))
+            // .finally(() => setIsLoading(false))
     }
 
     useEffect(() => {

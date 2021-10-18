@@ -5,18 +5,18 @@ import { useAuth } from '../Hook/useAuth';
 
 const Register = () => {
     const { user, signWithEmail, name, email, password, setName, setEmail, setPassword, isLoading } = useAuth();
-    const handleName = (e) => {
-        const tmpName = e.target.value;
-        setName(tmpName);
-    }
-    const handleEmail = (e) => {
-        const tmpEmail = e.target.value;
-        setEmail(tmpEmail);
-    }
-    const handlePassword = (e) => {
-        const tmpPassword = e.target.value;
-        setPassword(tmpPassword);
-    }
+    // const handleName = (e) => {
+    //     const tmpName = e.target.value;
+    //     setName(tmpName);
+    // }
+    // const handleEmail = (e) => {
+    //     const tmpEmail = e.target.value;
+    //     setEmail(tmpEmail);
+    // }
+    // const handlePassword = (e) => {
+    //     const tmpPassword = e.target.value;
+    //     setPassword(tmpPassword);
+    // }
     console.log(user);
 
     return (
@@ -39,11 +39,11 @@ const Register = () => {
                                     Your name
                                 </label>
                                 <input
-                                    onBlur={handleName}
+                                    onBlur={(e) => { setName(e.target.value) }}
                                     id="name"
-                                    name="email"
-                                    type="email"
-                                    autoComplete="email"
+                                    name="name"
+                                    type="text"
+                                    autoComplete="name"
                                     required
                                     className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                     placeholder="Your name"
@@ -54,7 +54,7 @@ const Register = () => {
                                     Email address
                                 </label>
                                 <input
-                                    onBlur={handleEmail}
+                                    onBlur={(e) => { setEmail(e.target.value) }}
                                     id="email-address"
                                     name="email"
                                     type="email"
@@ -69,7 +69,7 @@ const Register = () => {
                                     Password
                                 </label>
                                 <input
-                                    onBlur={handlePassword}
+                                    onBlur={(e) => { setPassword(e.target.value) }}
                                     id="password"
                                     name="password"
                                     type="password"

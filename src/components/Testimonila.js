@@ -29,7 +29,7 @@ const Testimonila = () => {
                 {
                     testimonialList.map(comment => {
                         return (
-                            <SwiperSlide>
+                            <SwiperSlide key={comment.id}>
                                 <div className="border py-10 px-12 flex flex-col sm:w-2/4 w-11/12 h-100 mx-auto rounded-xl">
                                     <h3 className="text-2xl">{comment.title}</h3>
                                     <p className="text-gray-500 my-5">{comment.comment}</p>
