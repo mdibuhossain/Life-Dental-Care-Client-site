@@ -1,21 +1,40 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import BannerBG from '../components/BannerStyled';
+
+// Import Swiper styles
+import "swiper/swiper-bundle.css";
+import Banner from '../components/Banner';
 
 const Home = () => {
     return (
         <header>
-            <BannerBG img="/assets/img/banner/banner-1.png">
-                <div className="grid grid-cols-2 absolute bottom-0 items-center">
-                    <div className="w-10/12 ml-auto text-white">
-                        <h3 className="text-3xl font-semibold">Welcome to Life Dental Care</h3>
-                        <h1 className="text-7xl font-bold bg-indigo-300 rounded-lg py-4 px-3 bg-opacity-30 my-2">Caring for all your</h1>
-                        <h1 className="text-7xl font-bold bg-indigo-300 rounded-lg py-4 px-3 bg-opacity-30 my-2">family's detals needs</h1>
-                    </div>
-                    <div>
-                        <img src="/assets/img/banner/banner-item-1.png" alt="" />
-                    </div>
-                </div>
-            </BannerBG>
+            <Swiper slidesPerView={1} spaceBetween={0} loop={true} pagination={{
+                "clickable": true
+            }} navigation={false} className="mySwiper">
+                <SwiperSlide>
+                    <BannerBG img="/assets/img/banner/banner-1.png">
+                        <Banner
+                            greeting="Welcome to Life Dental Care"
+                            title="Caring for all your"
+                            title2nd="family's detals needs"
+                            img="/assets/img/banner/banner-item-1.png"
+                        />
+                    </BannerBG>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <BannerBG img="/assets/img/banner/banner-1.png">
+                        <Banner
+                            greeting="Welcome to Life Dental Care"
+                            title="A healthy smile"
+                            title2nd="begins with a child."
+                            img="/assets/img/banner/banner-item-2.png"
+                        />
+                    </BannerBG>
+                </SwiperSlide>
+            </Swiper>
         </header>
     );
 };
