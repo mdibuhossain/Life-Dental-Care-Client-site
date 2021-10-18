@@ -1,13 +1,13 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, EffectCoverflow } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, EffectCube, EffectFlip } from 'swiper';
 import useAPI from '../Hook/useAPI';
 import SectionTitle from './SectionTitle';
 
 // Import Swiper styles
 import 'swiper/swiper-bundle';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]);
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFlip]);
 
 const Testimonila = () => {
     const { testimonialList } = useAPI();
@@ -18,19 +18,10 @@ const Testimonila = () => {
                 subtitle="What Our Patients Say About Us"
             />
             <Swiper
-                height={'100px'}
-                effect={'coverflow'}
-                coverflowEffect={{
-                    "rotate": 50,
-                    "stretch": 0,
-                    "depth": 100,
-                    "modifier": 1,
-                    "slideShadows": true
-                }}
                 grabCursor={true}
                 loop={true}
                 spaceBetween={50}
-                slidesPerView={3}
+                slidesPerView={1}
                 onSlideChange={() => console.log('slide chage')}
                 onSwiper={swiper => console.log(swiper)}
                 pagination={{ clickable: true }}
@@ -39,7 +30,7 @@ const Testimonila = () => {
                     testimonialList.map(comment => {
                         return (
                             <SwiperSlide>
-                                <div className="border py-10 px-12 flex flex-col mx-auto rounded-xl">
+                                <div className="border py-10 px-12 flex flex-col sm:w-2/4 w-11/12 h-100 mx-auto rounded-xl">
                                     <h3 className="text-2xl">{comment.title}</h3>
                                     <p className="text-gray-500 my-5">{comment.comment}</p>
                                     <div className="flex items-center">
