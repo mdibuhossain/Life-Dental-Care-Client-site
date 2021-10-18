@@ -20,7 +20,7 @@ const ServiceItem = ({ service }) => {
                         {
                             service?.category.map((cat, index) => {
                                 return (
-                                    <span key={index} className="mr-2 text-blue-500">{cat}</span>
+                                    <span key={index} className="mr-2 text-blue-500 inline-block my-1">{cat}</span>
                                 )
                             })
                         }
