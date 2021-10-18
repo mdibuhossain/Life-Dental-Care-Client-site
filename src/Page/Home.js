@@ -5,18 +5,18 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import BannerBG from '../components/BannerStyled';
 import Banner from '../components/Banner';
 import Service from '../components/Service';
+import Doctor from '../components/Doctor';
+import Testimonila from '../components/Testimonila';
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
-import Doctor from '../components/Doctor';
-import Testimonila from '../components/Testimonila';
 
 const Home = () => {
     return (
         <div>
             <Swiper slidesPerView={1} spaceBetween={0} loop={true} pagination={{
                 "clickable": true
-            }} navigation={false} className="mySwiper">
+            }} navigation={false}>
                 <SwiperSlide>
                     <BannerBG img="/assets/img/banner/banner-1.png">
                         <Banner
