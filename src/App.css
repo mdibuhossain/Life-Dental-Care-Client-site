@@ -18,6 +18,13 @@ body{
 .service-container{
 }
 
+.service-item-img{
+  transition: 0.3s ease-in-out;
+}
+.tilt-container:hover .service-item-img{
+  transform: scale(120%);
+}
+
 
 /* login page */
 .login-page{

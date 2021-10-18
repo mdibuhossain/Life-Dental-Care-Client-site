@@ -1,14 +1,14 @@
 import React from 'react';
 import { BiLike } from 'react-icons/bi'
-import Tilt from 'react-vanilla-tilt'
+import Tilt from 'react-tilt'
 
 const ServiceItem = ({ service }) => {
     console.log(service);
     return (
-        <Tilt>
-            <div>
-                <div className="h-auto w-auto overflow-hidden rounded-xl">
-                    <img src={service?.img} alt="" />
+        <Tilt className="tilt-container cursor-pointer">
+            <div className="Tilt-inner border rounded-t-xl overflow-hidden">
+                <div className="h-auto w-auto overflow-hidden">
+                    <img className="service-item-img" src={service?.img} alt="" />
                 </div>
                 <div className="p-4">
                     <div>
