@@ -20,7 +20,7 @@ const Testimonila = () => {
             <Swiper
                 grabCursor={true}
                 loop={true}
-                spaceBetween={50}
+                spaceBetween={0}
                 slidesPerView={1}
                 onSlideChange={() => console.log('slide chage')}
                 onSwiper={swiper => console.log(swiper)}
