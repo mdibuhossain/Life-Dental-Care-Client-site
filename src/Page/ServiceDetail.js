@@ -15,7 +15,8 @@ const ServiceDetail = () => {
                 title={currentService?.title}
             />
             <hr />
-            <div className="grid sm:grid-cols-2 my-5">
+            <SectionTitle />
+            <div className="grid sm:grid-cols-2">
                 <div>
                     <img src={currentService?.img} alt="" />
                 </div>
@@ -51,10 +52,11 @@ const ServiceDetail = () => {
                     </table>
                 </div>
             </div>
-            <div className="sm:w-2/4 w-100 my-5">
+            <div className="sm:w-2/4 w-100">
                 <h3 className="text-xl font-semibold my-5">Description</h3>
                 <p>{currentService?.description}</p>
             </div>
+            <SectionTitle />
         </div>
     );
 };
