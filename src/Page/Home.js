@@ -8,6 +8,8 @@ import Service from '../components/Service';
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
+import Doctor from '../components/Doctor';
+import Testimonila from '../components/Testimonila';
 
 const Home = () => {
     return (
@@ -37,6 +39,8 @@ const Home = () => {
                 </SwiperSlide>
             </Swiper>
             <Service />
+            <Doctor />
+            <Testimonila />
         </div>
     );
 };

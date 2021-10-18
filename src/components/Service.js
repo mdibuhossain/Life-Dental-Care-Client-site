@@ -8,12 +8,12 @@ const Service = () => {
     const { serviceList } = useAPI();
     console.log(serviceList);
     return (
-        <div className="md:w-10/12 mx-auto mb-20">
+        <div className="md:w-10/12  w-9/12 mx-auto mb-20">
             <SectionTitle
                 title="Our services"
                 subtitle="What we do?"
             />
-            <div className="service-container grid md:grid-cols-4 sm:grid-cols-2 w-9/12 sm:w-full mx-auto gap-14">
+            <div className="grid md:grid-cols-4 sm:grid-cols-2 mx-auto gap-14">
                 {
                     serviceList.map(item => <ServiceItem key={item.id} service={item} />)
                 }

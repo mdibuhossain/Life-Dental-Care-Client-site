@@ -2,7 +2,7 @@ export const doctorsAPI = [
     {
         id: 'ooxx1',
         name: 'Archie White',
-        job: 'Dentist',
+        specialist: 'Dentist',
         appointment: 'Senior Doctor',
         experience: '10 years',
         img: 'assets/img/dentists/d-1.jpg'
@@ -10,7 +10,7 @@ export const doctorsAPI = [
     {
         id: 'ooxx2',
         name: 'Dylan Taylor',
-        job: 'Dentist',
+        specialist: 'Orthodontist',
         appointment: 'Senior Doctor',
         experience: '12 years',
         img: 'assets/img/dentists/d-2.jpg'
@@ -18,7 +18,7 @@ export const doctorsAPI = [
     {
         id: 'ooxx3',
         name: 'Amy Clarke',
-        job: 'Hygienist',
+        specialist: 'Hygienist',
         appointment: 'Junior Doctor',
         experience: '5 years',
         img: 'assets/img/dentists/d-3.jpg'
