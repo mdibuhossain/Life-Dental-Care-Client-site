@@ -6,6 +6,7 @@ import AuthProvider from './Context/AuthProvider';
 import Appointment from './Page/Appointment';
 import Home from './Page/Home';
 import Login from './Page/Login';
+import Profile from './Page/Profile';
 import Register from './Page/Register';
 import ServiceDetail from './Page/ServiceDetail';
 import Shop from './Page/Shop';
@@ -29,6 +30,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute exact path="/appointment">
               <Appointment />
+            </PrivateRoute>
+            <PrivateRoute exact path="/profile">
+              <Profile />
             </PrivateRoute>
             <Route exact path="/login">
               <Login />
