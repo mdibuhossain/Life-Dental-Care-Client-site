@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../Hook/useAuth';
 
 const Login = () => {
-    const { error, signWithGoogle, signInWithEmail, setEmail, setPassword } = useAuth();
+    const { error, signWithGoogle, signWithFacebook, signInWithEmail, setEmail, setPassword } = useAuth();
     return (
         <>
             <div className="login-page flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -95,6 +95,7 @@ const Login = () => {
                                 Google
                             </button>
                             <button
+                                onClick={signWithFacebook}
                                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             >
                                 Facebook
