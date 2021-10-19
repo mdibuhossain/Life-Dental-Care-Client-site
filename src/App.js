@@ -3,7 +3,7 @@ import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import AuthProvider from './Context/AuthProvider';
-import Contact from './Page/Contact';
+import Appointment from './Page/Appointment';
 import Home from './Page/Home';
 import Login from './Page/Login';
 import Register from './Page/Register';
@@ -26,8 +26,8 @@ function App() {
             <Route exact path="/shop">
               <Shop />
             </Route>
-            <Route exact path="/contact">
-              <Contact />
+            <Route exact path="/appointment">
+              <Appointment />
             </Route>
             <Route exact path="/login">
               <Login />

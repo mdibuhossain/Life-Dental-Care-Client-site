@@ -2,7 +2,7 @@
 const navigation = [
     { name: 'Home', to: '/', current: true },
     { name: 'Shop', to: '/shop', current: false },
-    { name: 'Contact', to: '/contact', current: false },
+    { name: 'Appointment', to: '/appointment', current: false },
 ]
 
 
