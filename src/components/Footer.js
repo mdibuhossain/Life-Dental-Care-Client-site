@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { BsFacebook, BsTwitter, BsLinkedin, BsDribbble } from 'react-icons/bs';
 import { navList } from '../Utilities/utilities'
 
@@ -23,13 +24,13 @@ const Footer = () => {
                     {
                         navList.map(item => {
                             return (
-                                <Link
+                                <HashLink
                                     key={item.name}
                                     to={item.to}
                                     className="text-gray-300 hover:text-white py-1 text-sm font-medium"
                                 >
                                     {item.name}
-                                </Link>
+                                </HashLink>
                             )
                         })
                     }

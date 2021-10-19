@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
-import { useLocation } from 'react-router'
+import { useLocation } from 'react-router';
+import { HashLink } from 'react-router-hash-link';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { HiOutlineX, HiOutlineBell, HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
@@ -61,7 +62,7 @@ const Header = () => {
                                     <div className="hidden sm:block sm:ml-6">
                                         <div className="flex space-x-4">
                                             {navList.map((item) => (
-                                                <Link
+                                                <HashLink
                                                     key={item.name}
                                                     to={item.to}
                                                     className={classNames(
@@ -71,7 +72,7 @@ const Header = () => {
                                                     aria-current={item.current ? 'page' : undefined}
                                                 >
                                                     {item.name}
-                                                </Link>
+                                                </HashLink>
                                             ))}
                                         </div>
                                     </div>
@@ -144,7 +145,7 @@ const Header = () => {
                         <Disclosure.Panel className="sm:hidden">
                             <div className="px-2 pt-2 pb-3 space-y-1">
                                 {navList.map((item) => (
-                                    <Link
+                                    <HashLink
                                         key={item.name}
                                         to={item.to}
                                         className={classNames(
@@ -154,7 +155,7 @@ const Header = () => {
                                         aria-current={item.current ? 'page' : undefined}
                                     >
                                         {item.name}
-                                    </Link>
+                                    </HashLink>
                                 ))}
                             </div>
                         </Disclosure.Panel>

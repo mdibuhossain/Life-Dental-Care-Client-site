@@ -6,7 +6,7 @@ import ServiceItem from './ServiceItem';
 const Service = () => {
     const { serviceList } = useAPI();
     return (
-        <div className="md:w-10/12  w-9/12 mx-auto">
+        <div id="service" className="md:w-10/12  w-9/12 mx-auto">
             <SectionTitle
                 title="Our services"
                 subtitle="What we do?"
