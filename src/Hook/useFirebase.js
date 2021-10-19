@@ -16,11 +16,19 @@ export const useFirebase = () => {
 
     const location = useLocation();
     const history = useHistory();
+    console.log(location);
 
     const redirect = () => {
         const { state } = location;
         (state?.from) ? history.push(state?.from?.pathname) : history.push('/')
     }
+
+    // useEffect(() => {
+    //     if (user) {
+    //         if (location.pathname === '/login' || location.pathname === '/logout')
+    //             console.log('page on login')
+    //     }
+    // }, [])
 
     const signWithGoogle = (e) => {
         e.preventDefault();
@@ -84,8 +92,11 @@ export const useFirebase = () => {
 
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {
-            if (user)
+            if (user) {
                 setUser(user);
+                if (location.pathname === '/login' || location.pathname === '/logout')
+                    history.push('/');
+            }
             else
                 setUser({});
             setIsLoading(false);
