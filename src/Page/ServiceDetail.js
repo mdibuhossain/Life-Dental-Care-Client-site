@@ -54,7 +54,7 @@ const ServiceDetail = () => {
             </div>
             <div className="sm:w-2/4 w-100">
                 <h3 className="text-xl font-semibold my-5">Description</h3>
-                <p>{currentService?.description}</p>
+                <p className="text-gray-500">{currentService?.description}</p>
             </div>
             <SectionTitle />
         </div>

@@ -29,10 +29,12 @@ export const useFirebase = () => {
         setError('');
         const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
-            .then(result => setUser(result.user))
-            .catch(error => setError('Something wrong with google'))
+            .then(result => {
+                setUser(result.user)
+                user && redirect();
+            })
+            .catch(error => setError('Something wrong with Google'))
             .finally(() => setIsLoading(false))
-        user && redirect();
     }
 
     const signWithFacebook = (e) => {
@@ -41,10 +43,14 @@ export const useFirebase = () => {
         setError('');
         const facebookProvider = new FacebookAuthProvider();
         signInWithPopup(auth, facebookProvider)
-            .then(result => setUser(result.user))
+            .then(result => {
+                setUser(result.user)
+                user && redirect();
+            })
             .catch(error => setError('Something wrong with Facebook'))
-            .finally(() => setIsLoading(false))
-        user && redirect();
+            .finally(() => {
+                setIsLoading(false)
+            })
     }
 
     const signInWithEmail = (e) => {
@@ -52,10 +58,12 @@ export const useFirebase = () => {
         setIsLoading(true);
         setError('');
         signInWithEmailAndPassword(auth, email, password)
-            .then(result => setUser(result.user))
+            .then(result => {
+                setUser(result.user)
+                user && redirect();
+            })
             .catch(error => setError("Incorrect Email and Password!"))
             .finally(() => setIsLoading(false))
-        user && redirect();
     }
 
     const signUpWithEmail = (e) => {
@@ -69,10 +77,10 @@ export const useFirebase = () => {
                     displayName: `${name && name}`,
                     photoURL: `${name && "/assets/img/avator.png"}`
                 }).then(() => { }).catch(error => setError(error.message))
+                user && redirect();
             })
             .catch(error => setError('Invalid Email and Password!'))
             .finally(() => setIsLoading(false))
-        user && redirect();
     }
 
     const logOut = () => {
