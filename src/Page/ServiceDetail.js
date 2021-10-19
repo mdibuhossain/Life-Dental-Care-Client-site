@@ -22,8 +22,8 @@ const ServiceDetail = () => {
                 </div>
                 <div>
                     <h3 className="text-xl font-semibold my-5">Service details</h3>
-                    <table class="min-w-full divide-y divide-gray-200 text-gray-500">
-                        <tbody class="bg-white divide-y divide-gray-200">
+                    <table className="min-w-full divide-y divide-gray-200 text-gray-500">
+                        <tbody className="bg-white divide-y divide-gray-200">
                             <tr>
                                 <td className="py-3">Likes:</td>
                                 <td className="py-3 flex items-center">{currentService?.likes} <BiLike className="inline-block ml-2" /></td>

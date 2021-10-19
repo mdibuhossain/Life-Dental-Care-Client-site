@@ -1,5 +1,6 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, signOut } from 'firebase/auth';
 import { useEffect, useState } from 'react';
+import { useHistory, useLocation } from 'react-router';
 import { initAuth } from '../Firebase/initAuth';
 
 initAuth();
@@ -13,6 +14,14 @@ export const useFirebase = () => {
     const [isLoading, setIsLoading] = useState(true);
     const auth = getAuth();
 
+    const location = useLocation();
+    const history = useHistory();
+
+    const redirect = () => {
+        const { state } = location;
+        (state?.from) ? history.push(state?.from?.pathname) : history.push('/')
+    }
+
     const signWithGoogle = (e) => {
         e.preventDefault();
         setIsLoading(true);
@@ -22,6 +31,7 @@ export const useFirebase = () => {
             .then(result => setUser(result.user))
             .catch(error => setError('Something wrong with google'))
             .finally(() => setIsLoading(false))
+        user && redirect();
     }
 
     const signWithFacebook = (e) => {
@@ -33,6 +43,7 @@ export const useFirebase = () => {
             .then(result => setUser(result.user))
             .catch(error => setError('Something wrong with Facebook'))
             .finally(() => setIsLoading(false))
+        user && redirect();
     }
 
     const signInWithEmail = (e) => {
@@ -43,6 +54,7 @@ export const useFirebase = () => {
             .then(result => setUser(result.user))
             .catch(error => setError("Incorrect Email and Password!"))
             .finally(() => setIsLoading(false))
+        user && redirect();
     }
 
     const signUpWithEmail = (e) => {
@@ -59,6 +71,7 @@ export const useFirebase = () => {
             })
             .catch(error => setError('Invalid Email and Password!'))
             .finally(() => setIsLoading(false))
+        user && redirect();
     }
 
     const logOut = () => {
@@ -66,6 +79,7 @@ export const useFirebase = () => {
         signOut(auth)
             .then(() => setUser({}))
         // .finally(() => setIsLoading(false))
+        user && redirect();
     }
 
     useEffect(() => {
