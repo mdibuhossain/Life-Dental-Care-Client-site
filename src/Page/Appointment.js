@@ -17,7 +17,7 @@ const Appointment = () => {
                                     <div className="grid grid-cols-6 gap-6">
                                         <div className="col-span-6 sm:col-span-3">
                                             <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
-                                                First name
+                                                Full name
                                             </label>
                                             <input
                                                 type="text"
@@ -47,6 +47,18 @@ const Appointment = () => {
                                                 type="text"
                                                 name="subject"
                                                 id="subject"
+                                                className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 border px-3 py-2 rounded-md"
+                                            />
+                                        </div>
+                                        <div className="col-span-6">
+                                            <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
+                                                Message
+                                            </label>
+                                            <textarea
+                                                type="text"
+                                                name="message"
+                                                id="message"
+                                                style={{height: '210px'}}
                                                 className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 border px-3 py-2 rounded-md"
                                             />
                                         </div>
