@@ -9,6 +9,7 @@ import Login from './Page/Login';
 import Register from './Page/Register';
 import ServiceDetail from './Page/ServiceDetail';
 import Shop from './Page/Shop';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -20,15 +21,15 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/service/:serviceID">
+            <PrivateRoute path="/service/:serviceID">
               <ServiceDetail />
-            </Route>
-            <Route exact path="/shop">
+            </PrivateRoute>
+            <PrivateRoute exact path="/shop">
               <Shop />
-            </Route>
-            <Route exact path="/appointment">
+            </PrivateRoute>
+            <PrivateRoute exact path="/appointment">
               <Appointment />
-            </Route>
+            </PrivateRoute>
             <Route exact path="/login">
               <Login />
             </Route>
