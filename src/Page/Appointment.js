@@ -3,7 +3,7 @@ import SectionTitle from '../components/SectionTitle';
 
 const Appointment = () => {
     return (
-        <div className="sm:w-9/12 w-11/12 mx-auto">
+        <div className="sm:w-9/12 w-11/12 mx-auto fullPage">
             <SectionTitle title="Appointment" />
             <hr />
             <SectionTitle />

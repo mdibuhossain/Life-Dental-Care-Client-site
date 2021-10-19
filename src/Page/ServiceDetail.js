@@ -10,7 +10,7 @@ const ServiceDetail = () => {
     const currentService = serviceList.find(item => item.id === serviceID);
     console.log(currentService);
     return (
-        <div className="sm:w-9/12 w-11/12 mx-auto">
+        <div className="sm:w-9/12 w-11/12 mx-auto fullPage">
             <SectionTitle
                 title={currentService?.title}
             />
