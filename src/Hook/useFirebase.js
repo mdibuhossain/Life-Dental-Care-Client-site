@@ -23,13 +23,6 @@ export const useFirebase = () => {
         (state?.from) ? history.push(state?.from?.pathname) : history.push('/')
     }
 
-    // useEffect(() => {
-    //     if (user) {
-    //         if (location.pathname === '/login' || location.pathname === '/logout')
-    //             console.log('page on login')
-    //     }
-    // }, [])
-
     const signWithGoogle = (e) => {
         e.preventDefault();
         setIsLoading(true);
