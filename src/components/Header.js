@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { useLocation } from 'react-router'
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { HiOutlineX, HiOutlineBell, HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
@@ -10,8 +11,18 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
+
 const Header = () => {
     const { user, logOut, isLoading } = useAuth();
+
+    const location = useLocation();
+    navList.forEach(link => {
+        if (link.to.toLowerCase() === location.pathname.toLowerCase())
+            link.current = true;
+        else
+            link.current = false;
+    })
+
     return (
         <>
             <Disclosure as="nav" className="bg-gray-800 fixed top-0 z-10 w-screen">

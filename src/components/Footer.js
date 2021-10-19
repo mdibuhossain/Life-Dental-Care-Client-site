@@ -28,7 +28,7 @@ const Footer = () => {
                 </div>
                 <div className="text-gray-400 mb-5 grid md:grid-cols-2">
                     <p>Developed by Ibrahim Hossain</p>
-                    <p>&copy; All copyrights reserved by Life Dental Care</p>
+                    <p>&copy; All rights reserved by Life Dental Care</p>
                 </div>
             </div>
         </div>
