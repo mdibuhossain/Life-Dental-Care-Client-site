@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="sm:w-9/12 w-11/12 text-gray-400 mt-5 mx-auto text-center">
-                <p>Developed by Ibrahim Hossain</p>
+                <p>Developed by <a className="font-semibold" target="_blank" rel="noreferrer" href="https://github.com/mdibuhossain">Ibrahim Hossain</a></p>
                 <hr className="border-gray-600 my-2" />
                 <p>&copy; 2021 All rights reserved by Life Dental Care</p>
             </div>
