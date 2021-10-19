@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../Hook/useAuth';
 
 const Register = () => {
-    const { user, signUpWithEmail, setName, setEmail, setPassword, error } = useAuth();
+    const { signUpWithEmail, setName, setEmail, setPassword, error } = useAuth();
     // console.log(user);
 
     return (
