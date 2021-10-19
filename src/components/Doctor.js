@@ -6,7 +6,7 @@ import SectionTitle from './SectionTitle';
 const Doctor = () => {
     const { doctorList } = useAPI();
     return (
-        <div className="md:w-10/12 w-9/12 mx-auto">
+        <div id="doctors" className="md:w-10/12 w-9/12 mx-auto">
             <SectionTitle
                 title="Meet Our Doctors"
                 subtitle="Team of Professionals"
