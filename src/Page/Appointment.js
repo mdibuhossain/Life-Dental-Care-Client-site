@@ -11,7 +11,7 @@ const Appointment = () => {
             <div className="mt-10 sm:mt-0">
                 <div className="md:grid md:grid-cols-3 md:gap-6">
                     <div className="mt-5 md:mt-0 md:col-span-2">
-                        <form>
+                        <div>
                             <div className="shadow-lg overflow-hidden sm:rounded-md">
                                 <div className="px-4 py-5 bg-white sm:p-6">
                                     <div className="grid grid-cols-6 gap-6">
@@ -58,7 +58,7 @@ const Appointment = () => {
                                                 type="text"
                                                 name="message"
                                                 id="message"
-                                                style={{height: '210px'}}
+                                                style={{ height: '210px' }}
                                                 className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 border px-3 py-2 rounded-md"
                                             />
                                         </div>
@@ -72,7 +72,7 @@ const Appointment = () => {
                                     </button>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
