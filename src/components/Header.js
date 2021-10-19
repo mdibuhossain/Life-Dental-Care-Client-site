@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { HiOutlineX, HiOutlineBell, HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
-import { navigation } from '../Utilities/utilities';
+import { navList } from '../Utilities/utilities';
 import { useAuth } from '../Hook/useAuth';
 
 
@@ -49,7 +49,7 @@ const Header = () => {
                                     </div>
                                     <div className="hidden sm:block sm:ml-6">
                                         <div className="flex space-x-4">
-                                            {navigation.map((item) => (
+                                            {navList.map((item) => (
                                                 <Link
                                                     key={item.name}
                                                     to={item.to}
@@ -132,7 +132,7 @@ const Header = () => {
 
                         <Disclosure.Panel className="sm:hidden">
                             <div className="px-2 pt-2 pb-3 space-y-1">
-                                {navigation.map((item) => (
+                                {navList.map((item) => (
                                     <Link
                                         key={item.name}
                                         to={item.to}
