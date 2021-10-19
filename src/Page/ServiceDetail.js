@@ -8,7 +8,7 @@ const ServiceDetail = () => {
     const { serviceID } = useParams();
     const { serviceList } = useAPI();
     const currentService = serviceList.find(item => item.id === serviceID);
-    console.log(currentService);
+    // console.log(currentService);
     return (
         <div className="sm:w-9/12 w-11/12 mx-auto fullPage">
             <SectionTitle

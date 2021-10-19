@@ -16,7 +16,7 @@ export const useFirebase = () => {
 
     const location = useLocation();
     const history = useHistory();
-    console.log(location);
+    // console.log(location);
 
     const redirect = () => {
         const { state } = location;
