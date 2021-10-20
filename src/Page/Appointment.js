@@ -1,4 +1,5 @@
 import React from 'react';
+import Mapbox from '../components/Mapbox';
 import SectionTitle from '../components/SectionTitle';
 
 const Appointment = () => {
@@ -8,8 +9,8 @@ const Appointment = () => {
             <hr />
             <SectionTitle />
 
-            <div className="mt-10 sm:mt-0">
-                <div className="md:grid md:grid-cols-3 md:gap-6">
+            <div className="mt-10 sm:mt-0 grid sm:grid-cols-2 gap-10">
+                <div className="md:grid">
                     <div className="mt-5 md:mt-0 md:col-span-2">
                         <div>
                             <div className="shadow-lg overflow-hidden sm:rounded-md">
@@ -74,6 +75,9 @@ const Appointment = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="overflow-hidden rounded-lg">
+                    <Mapbox />
                 </div>
             </div>
 

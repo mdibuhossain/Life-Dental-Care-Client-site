@@ -11,6 +11,7 @@ import Register from './Page/Register';
 import ServiceDetail from './Page/ServiceDetail';
 import Shop from './Page/Shop';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 function App() {
   return (
