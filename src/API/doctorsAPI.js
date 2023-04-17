@@ -23,4 +23,12 @@ export const doctorsAPI = [
         experience: '5 years',
         img: 'assets/img/dentists/d-3.jpg'
     },
+    {
+        id: 'ooxx4',
+        name: 'Jenna Berg',
+        specialist: 'Dentist',
+        appointment: 'Junior Doctor',
+        experience: '5 years',
+        img: 'assets/img/dentists/d-4.jpg'
+    }
 ]

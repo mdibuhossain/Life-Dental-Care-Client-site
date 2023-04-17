@@ -1,9 +1,9 @@
 import React from 'react';
 import useAPI from '../Hook/useAPI';
-import DoctorItem from './DoctorItem';
-import SectionTitle from './SectionTitle';
+import DoctorItem from '../components/DoctorItem';
+import SectionTitle from '../components/SectionTitle';
 
-const Doctor = () => {
+const Doctors = () => {
     const { doctorList } = useAPI();
     return (
         <div id="doctors" className="md:w-10/12 w-9/12 mx-auto">
@@ -19,6 +19,6 @@ const Doctor = () => {
             <SectionTitle />
         </div>
     );
-};
+}
 
-export default Doctor;
+export default Doctors;

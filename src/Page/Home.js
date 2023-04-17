@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import BannerBG from '../components/BannerStyled';
 import Banner from '../components/Banner';
 import Service from '../components/Service';
-import Doctor from '../components/Doctor';
+import FeaturedDoctor from '../components/FeaturedDoctor';
 import Testimonila from '../components/Testimonila';
 
 // Import Swiper styles
@@ -37,7 +37,7 @@ const Home = () => {
                 </SwiperSlide>
             </Swiper>
             <Service />
-            <Doctor />
+            <FeaturedDoctor />
             <Testimonila />
         </div>
     );

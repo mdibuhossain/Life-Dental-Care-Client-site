@@ -3,9 +3,9 @@ import { FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 const DoctorItem = ({ doc }) => {
     return (
-        <div className="mx-auto border rounded-xl p-10">
-            <div className="overflow-hidden">
-                <img className="rounded-full mx-auto" src={doc.img} alt="doctor" />
+        <div className="mx-auto border border-gray-300 rounded-xl p-10 m-2">
+            <div className="relative rounded-full overflow-hidden w-36 h-36 border border-gray-700">
+                <img className="absolute w-36 h-36" src={doc.img} alt="doctor" />
             </div>
             <div className="text-center my-5">
                 <h2 className="text-2xl">{doc.name}</h2>

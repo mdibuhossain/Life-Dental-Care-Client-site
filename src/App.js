@@ -12,6 +12,7 @@ import ServiceDetail from './Page/ServiceDetail';
 import Shop from './Page/Shop';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import Doctors from './Page/Doctors';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route exact path="/shop">
               <Shop />
+            </Route>
+            <Route exact path="/doctors">
+              <Doctors />
             </Route>
             <PrivateRoute exact path="/appointment">
               <Appointment />
