@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, EffectCube, EffectFlip } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, EffectFlip } from 'swiper';
 import useAPI from '../Hook/useAPI';
 import SectionTitle from './SectionTitle';
 

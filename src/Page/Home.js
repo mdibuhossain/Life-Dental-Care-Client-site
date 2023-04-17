@@ -1,7 +1,5 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore from 'swiper';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import BannerBG from '../components/BannerStyled';
 import Banner from '../components/Banner';
 import Service from '../components/Service';
@@ -13,7 +11,7 @@ import "swiper/swiper-bundle.css";
 
 const Home = () => {
     return (
-        <div>
+        <div id="home">
             <Swiper slidesPerView={1} spaceBetween={0} loop={true} pagination={{
                 "clickable": true
             }} navigation={false}>

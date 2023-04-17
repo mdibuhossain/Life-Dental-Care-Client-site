@@ -16,9 +16,9 @@ const ServiceDetail = () => {
             />
             <hr />
             <SectionTitle />
-            <div className="grid sm:grid-cols-2">
+            <div className="grid md:grid-cols-2">
                 <div>
-                    <img src={currentService?.img} alt="" />
+                    <img className="rounded-lg md:w-11/12" src={currentService?.img} alt="" />
                 </div>
                 <div>
                     <h3 className="text-xl font-semibold my-5">Service details</h3>

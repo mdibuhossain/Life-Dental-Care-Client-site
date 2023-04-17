@@ -136,7 +136,7 @@ const Header = () => {
                                                 </Transition>
                                             </Menu>
                                         </div> : <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                                            <button className="bg-blue-300 transform duration-300 hover:scale-110 font-semibold rounded-2xl px-4 py-1"><Link to="/login">Login</Link></button>
+                                            <Link to="/login"><button className="bg-blue-300 transform duration-300 hover:scale-110 font-semibold rounded-2xl px-4 py-1">Login</button></Link>
                                         </div>
                                 }
                             </div>
