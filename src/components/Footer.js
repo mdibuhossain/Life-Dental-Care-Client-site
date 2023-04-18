@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="sm:w-9/12 w-11/12 mx-auto grid sm:grid-cols-3 text-center">
                 <div className="my-5">
                     <Link to="/">
-                        <img className="w-52 sm:mx-auto" src="/assets/img/logo.svg" alt="logo" />
+                        <img className="w-56 sm:mx-auto" src="/assets/img/logo.svg" alt="logo" />
                     </Link>
                     <div className="flex sm:justify-center items-center my-5 text-2xl">
                         <BsFacebook className="mx-2" />

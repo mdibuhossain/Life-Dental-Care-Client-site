@@ -46,14 +46,14 @@ const Header = () => {
                                     <div className="flex-shrink-0 flex items-center">
                                         <Link to="/">
                                             <img
-                                                className="block lg:hidden h-8 w-auto"
+                                                className="block lg:hidden h-10 w-auto"
                                                 src='/assets/img/singleLogo.svg'
                                                 alt="Workflow"
                                             />
                                         </Link>
                                         <Link to="/">
                                             <img
-                                                className="hidden lg:block h-8 w-auto"
+                                                className="hidden lg:block h-10 w-auto"
                                                 src="/assets/img/logo.svg"
                                                 alt="Workflow"
                                             />
